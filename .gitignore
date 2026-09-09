@@ -1,0 +1,18 @@
+# Private inquiry submissions
+inquiries/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local/editor files
+.DS_Store
+.vscode/
+
+# Secrets and credentials
+.env
+*.key
+*.pem
+
+# Logs
+*.log

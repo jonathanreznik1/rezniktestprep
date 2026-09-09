@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Reznik Test Prep</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/RTPlogo.png"
+                         alt="Reznik Test Prep logo"
+                         width="220"
+                         height="220">
+                </a>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#rates">Rates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="contact">
+            <div class="container">
+
+                <h1>Let's Talk About Your Student's Needs</h1>
+
+                <p>
+                    Looking for support with Math, Computer Science,
+                    test preparation, or academic skills? Tell me a little
+                    about your student and what you're looking for.
+                </p>
+
+
+                <form class="contact-form" method="POST" action="/cgi-bin/contact.py">
+                    
+                    <div class="form-group">
+                        <label for="parent-name">Parent/Guardian Name</label>
+                        <input
+                            type="text"
+                            id="parent-name"
+                            name="parent-name"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="grade">Student's Grade</label>
+
+                        <select id="grade" name="grade">
+                            <option value="">Select a grade</option>
+                            <option value="elementary">Elementary School</option>
+                            <option value="middle">Middle School</option>
+                            <option value="9">9th Grade</option>
+                            <option value="10">10th Grade</option>
+                            <option value="11">11th Grade</option>
+                            <option value="12">12th Grade</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="subject">Subject or Course</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="e.g. Algebra II, Geometry, AP Computer Science">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="needs">What does your student need help with?</label>
+
+                        <textarea
+                            id="needs"
+                            name="needs"
+                            rows="6"
+                            placeholder="Tell me about the student's current coursework, areas of difficulty, upcoming tests, or other academic goals."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="availability">Preferred Days and Times</label>
+
+                        <textarea
+                            id="availability"
+                            name="availability"
+                            rows="3"
+                            placeholder="e.g. Tuesday and Thursday after 4:00 PM"></textarea>
+                    </div>
+
+
+                    <fieldset class="form-group">
+
+                        <legend>Preferred Session Location</legend>
+
+                        <label class="radio-option">
+                            <input
+                                type="radio"
+                                name="location"
+                                value="library">
+                            Beverly Hills Public Library
+                        </label>
+
+                        <label class="radio-option">
+                            <input
+                                type="radio"
+                                name="location"
+                                value="online">
+                            Online via Zoom
+                        </label>
+
+                        <label class="radio-option">
+                            <input
+                                type="radio"
+                                name="location"
+                                value="student-location">
+                            Student's Location (+$40 travel fee)
+                        </label>
+
+                    </fieldset>
+
+
+                    <div class="form-group">
+                        <label for="additional-info">
+                            Anything else you'd like me to know?
+                        </label>
+
+                        <textarea
+                            id="additional-info"
+                            name="additional-info"
+                            rows="4"></textarea>
+                    </div>
+
+
+                    <button type="submit" class="glow-btn">
+                        <span>Send Message</span>
+                    </button>
+
+                </form>
+
+
+                <div class="contact-direct">
+
+                    <h2>Prefer to Reach Me Directly?</h2>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        <a href="tel:3233022877">323-302-2877</a>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@rezniktestprep.com">
+                            info@rezniktestprep.com
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Reznik Test Prep. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+/* ---------- General ---------- */
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration:none;
+}
+
+
+/* ---------- Sections ---------- */
+
+section {
+    padding: 40px 0;
+}
+
+.hero {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size:xx-large;
+}
+
+
+.hero img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section-label {
+    padding: 0px 0;
+}
+
+.services {
+    text-align: center;
+    padding: 0px 0;
+}
+
+.services h3 {
+    margin-top: 45px;
+    margin-bottom: 0px;
+}
+
+.services p {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+/* ---------- Button ---------- */
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+
+.glow-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    position: relative;
+    padding: 14px 28px;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden; /* Clips the rotating element outside the button boundaries */
+    cursor: pointer;
+  }
+  
+  /* Ensure the button text stays on top */
+  .glow-btn span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* The rotating colorful strip */
+  .glow-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: conic-gradient(#ff0055, #00ff66, #00ccff, #ff0055);
+    animation: rotateBorder 4s linear infinite;
+    z-index: 1;
+  }
+  
+  /* Mask to cover the center, leaving only the edge exposed */
+  .glow-btn::after {
+    content: '';
+    position: absolute;
+    inset: 2px; /* Controls border thickness */
+    background: #111;
+    border-radius: 6px;
+    z-index: 1;
+  }
+  
+  @keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .morph-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: monospace;
+    color: #00b4d8;
+    background-color: #e0f7fa;
+    border: 2px solid #00b4d8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease; /* Smoothly transitions the border changes */
+  }
+  
+  .morph-btn:hover {
+    border: 2px dashed #00b4d8;
+    border-radius: 24px; /* Flattens or heavily rounds corners */
+    background-color: #b2ebf2;
+    transform: translateY(-2px); /* Slight lift */
+  }
+
+  /* Cloud container */
+  
+  .cloud-container {
+    /* Responsive Width Constraints */
+    width: 100%;
+    max-width: 1000px; /* Limits maximum size on large screens */
+    margin: 12px auto; /* Generous top margin for the cloud bumps */
+    position:relative;
+    background: #ECEFF1; /* Cloud base color */
+    padding: 15px;
+    border-radius: 100px;
+    text-align: center;
+    z-index: 1; /* Keeps text above pseudo-elements if needed */
+  }
+  
+  .cloud-container h3 {
+      margin-top: 0;
+  }
+   
+  .cloud-container-leftalign {
+  display: flex;
+  flex-direction: row;       /* Places items side-by-side */
+  align-items: center;       /* Vertically centers the list and button */
+  justify-content:space-around; /* Pushes list to the left, button to the right */
+  gap: 30px;                 /* Puts a clean gap between the list and button */
+  flex-wrap: wrap;           /* Wraps gracefully if the screen gets too narrow */
+}
+
+/* Optional: Ensures the button wrapper doesn't have default paragraph margins interfering */
+.cloud-container-leftalign .btn-wrapper {
+  margin: 0;
+}
+
+
+/* Mobile Responsive adjustment */
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .rate-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        font-size: 1.5rem;
+    }
+
+    .cloud-container {
+        border-radius: 30px;
+        padding: 20px;
+    }
+
+}
+
+/* ---------- Rates Cards ---------- */
+
+  .rate-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+  }
+  
+  .rate {
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+  }
+  
+  .rate h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+  }
+  
+  .rate .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 10px 0 20px;
+  }
+  
+  .rate p:last-child {
+      margin-bottom: 0;
+  }
+  
+  .location {
+      text-align: center;
+      margin-top: 35px;
+  }
+  
+  
+  /* ---------- Mobile ---------- */
+  
+  @media (max-width: 768px) {
+      .rate-options {
+          grid-template-columns: 1fr;
+          gap: 20px;
+      }
+  }
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 30px 0;
+}
+
+/* ---------- Contact Form ---------- */
+
+.contact-form {
+    max-width: 700px;
+    margin: 40px auto 0;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label,
+.form-group legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00b4d8;
+}
+
+.form-group fieldset {
+    border: none;
+    padding: 0;
+}
+
+.radio-option {
+    display: block;
+    font-weight: normal !important;
+    margin-bottom: 10px;
+}
+
+.radio-option input {
+    width: auto;
+    margin-right: 8px;
+}
+
+.contact-direct {
+    max-width: 700px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.contact-direct h2 {
+    margin-bottom: 20px;
+}
