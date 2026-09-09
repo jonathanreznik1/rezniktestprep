@@ -6,7 +6,7 @@ The site provides information about tutoring services, instructor background, ra
 
 www.rezniktestprep.com
 
-(rezniktestprep.com)
+[rezniktestprep.com](rezniktestprep.com)
 
 ## Project Overview
 
