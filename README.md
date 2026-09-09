@@ -5,7 +5,8 @@ A responsive website for **Reznik Test Prep**, a private tutoring and academic c
 The site provides information about tutoring services, instructor background, rates, and contact options, with a focus on clear communication and a straightforward user experience for parents and students.
 
 www.rezniktestprep.com
-rezniktestprep.com
+
+(rezniktestprep.com)
 
 ## Project Overview
 
