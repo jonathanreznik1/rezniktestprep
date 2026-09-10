@@ -4,10 +4,21 @@
     box-sizing:border-box;
 }
 
+
+h1, h2, h3 {
+    font-family: "Libre Baskerville", serif;
+    /* font-family: "Lora", serif; */
+    /* font-family: "Merriweather", serif; */
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    /* font-family: "Source Sans 3", sans-serif; */
+    /* font-family: "Inter", sans-serif; */
+    font-family: "Lato", sans-serif;
+    /* font-family: Arial, sans-serif; */
     line-height: 1.6;
+    background-color: #F7F9FA;
 }
 
 .container {
@@ -51,6 +62,9 @@ section {
     align-items: center;
     text-align: center;
     font-size:xx-large;
+    /* font-family: "Lora", serif; */
+    font-family: "Libre Baskerville", serif;
+    /* font-family: "Merriweather", serif; */
 }
 
 
