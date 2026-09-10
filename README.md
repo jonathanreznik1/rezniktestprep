@@ -111,9 +111,10 @@ rezniktestprep/
     ├── contact.html
     ├── css/
     │   ├── style.css
-    │   └── style-generic-new-feel.css
     ├── images/
     │   ├── Chalkboard.png
-    │   └── RTPlogo.png
+    │   ├── RTPlogo.png
+    │   ├── transparent_Chalkboard.png
+    │   └── transparent_RTPlogo.png
     └── js/
 

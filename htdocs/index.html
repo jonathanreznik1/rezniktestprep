@@ -6,7 +6,7 @@
     
     <title>Tutoring and Test Preparation</title>
     
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
@@ -15,8 +15,16 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/transparent_RTPlogo.png" alt="RTP company logo" width="220" height="220">
+                <img src="images/transparent_RTPlogo.png"
+                     alt="Reznik Test Prep logo"
+                     id="logoImage">
             </div>
+            
+            <div id="logoModal" class="logo-modal">
+                <span class="logo-modal-close">&times;</span>
+                <img src="images/RTPlogo.png"
+                     alt="Reznik Test Prep logo enlarged">
+            </div>            
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
@@ -40,7 +48,7 @@
                 <img src="images/transparent_Chalkboard.png" alt="Chalkboard with writing on it">
 
                 <h1>Personalized tutoring and academic support</h1>
-                <p>for elementary, middle, and high school students<br>in Math and Computer Science</p>
+                <p>for elementary, middle, and high school Math and Computer Science</p>
             </div>
         </section>
         
@@ -158,5 +166,24 @@
         </div>
     </footer>
 
-</body>
+    <script>
+        const logoImage = document.getElementById("logoImage");
+        const logoModal = document.getElementById("logoModal");
+        const logoClose = document.querySelector(".logo-modal-close");
+        
+        logoImage.addEventListener("click", function() {
+            logoModal.style.display = "flex";
+        });
+        
+        logoClose.addEventListener("click", function() {
+            logoModal.style.display = "none";
+        });
+        
+        logoModal.addEventListener("click", function(event) {
+            if (event.target === logoModal) {
+                logoModal.style.display = "none";
+            }
+        });
+        </script>
+    </body>
 </html>

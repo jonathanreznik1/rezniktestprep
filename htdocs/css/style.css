@@ -40,6 +40,43 @@ header .container {
     align-items:center;
 }
 
+.logo img {
+    display: block;
+    width: 220px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Logo popup */
+.logo-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo-modal img {
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    max-height: 90vh;
+    background: white;
+}
+
+.logo-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     gap: 30px;
@@ -47,6 +84,12 @@ nav {
 
 nav a {
     text-decoration:none;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 90px;
+    }
 }
 
 
