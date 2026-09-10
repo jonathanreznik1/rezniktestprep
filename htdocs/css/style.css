@@ -61,10 +61,7 @@ section {
     display: flex;
     align-items: center;
     text-align: center;
-    font-size:xx-large;
-    /* font-family: "Lora", serif; */
-    font-family: "Libre Baskerville", serif;
-    /* font-family: "Merriweather", serif; */
+    font-size:large;
 }
 
 
@@ -74,6 +71,21 @@ section {
     width: 500px;
     height: auto;
     margin: 0 auto;
+}
+
+.hero h1 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 2.2rem;
+    line-height: 1.25;
+}
+
+.hero p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 750px;
+    margin: 20px auto 0;
 }
 
 .section-label {
@@ -353,4 +365,24 @@ footer {
 
 .contact-direct h2 {
     margin-bottom: 20px;
+}
+
+.hero {
+    background: #ffffff;
+}
+
+.services {
+    background: #f5f8fa;
+}
+
+.credentials {
+    background: #ffffff;
+}
+
+.approach {
+    background: #f5f8fa;
+}
+
+.rates {
+    background: #ffffff;
 }
